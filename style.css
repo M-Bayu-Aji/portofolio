@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,300&display=swap");
+
+:root {
+  --pri: #b6895b;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins";
+  background-color: #efefea;
+  padding: 1.2rem;
+  height: 2000px;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 5%;
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-radius: 5px;
+}
+
+.navbar .navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: blue;
+}
+
+.navbar .navbar-logo span {
+  color: black;
+}
+
+.navbar .navbar-nav a {
+  color: rgb(106, 106, 106);
+  display: inline-block;
+  font-size: 1rem;
+  padding: 10px;
+  margin: 0 0.5rem;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.navbar .navbar-nav a i {
+  font-size: 1.2rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #333;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.navbar .navbar-extra a {
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--pri);
+}
+
+#hamburger {
+  display: none;
+}
+
+/* End Navbar */
+
+/* Header */
+
+header {
+  max-width: 1200px;
+  background-color: white;
+  margin: 20px auto;
+  padding: 40px;
+  border-radius: 5px;
+  padding-top: 2rem;
+  /* position: relative; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+header .content h1 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4rem;
+}
+
+header .content h1 span {
+  color: blue;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+header .content p {
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+header .image {
+  position: relative;
+}
+
+header .image::before {
+  content: "o";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 38rem;
+  font-weight: 400;
+  line-height: 20rem;
+  color: #1d4ed8;
+  opacity: 0.2;
+  z-index: -100;
+}
+
+header .image img {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #1d4ed8;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #1e40af;
+}
+
+/* End Header */
+
+@media (max-width: 768px) {
+  #hamburger {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 90%;
+    left: -100%;
+    background-color: white;
+    width: 25rem;
+    height: 100vh;
+    transition: 0.8s;
+  }
+
+  .navbar .navbar-nav.active {
+    left: 0;
+  }
+
+  .navbar .navbar-nav a {
+    font-size: 1.4rem;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .navbar .navbar-nav a i {
+    font-size: 1.6rem;
+  }
+
+  header {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  header .image {
+    grid-area: 1/1/2/2;
+  }
+}
+
+/* HP */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  header .image::before {
+    display: none;
+  }
+
+  header .image img {
+    width: 320px;
+  }
+}
