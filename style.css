@@ -21,7 +21,7 @@ body {
   font-family: "Poppins";
   background-color: #efefea;
   padding: 1.2rem;
-  height: 2000px;
+  height: 4000px;
 }
 
 /* Navbar */
@@ -38,6 +38,7 @@ body {
   top: 0;
   z-index: 999;
   border-radius: 5px;
+  box-shadow: 1px 1px 10px #aaa;
 }
 
 .navbar .navbar-logo {
@@ -95,7 +96,7 @@ header {
   padding: 40px;
   border-radius: 5px;
   padding-top: 2rem;
-  /* position: relative; */
+  /* position: absolute; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -117,25 +118,11 @@ header .content h1 span {
 
 header .content p {
   margin-bottom: 2rem;
-  color: #ccc;
+  color: #555;
 }
 
 header .image {
-  position: relative;
-}
-
-header .image::before {
-  content: "o";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 38rem;
-  font-weight: 400;
-  line-height: 20rem;
-  color: #1d4ed8;
-  opacity: 0.2;
-  z-index: -100;
+  position: static;
 }
 
 header .image img {
@@ -149,17 +136,71 @@ header .image img {
   color: #fff;
   background-color: #1d4ed8;
   border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
   outline: none;
   border: none;
 }
 
 .btn:hover {
   background-color: #1e40af;
+  text-decoration: underline;
 }
 
 /* End Header */
+
+/* About */
+
+.about {
+  margin: auto;
+  max-width: 1200px;
+  padding: 40px;
+  background-color: white;
+}
+
+.about-me {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-me img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.about-text {
+  width: auto;
+  margin-left: 20px;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.about-text h2 {
+  color: #333;
+  font-size: 65px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #1d4ed8;
+}
+
+.about-text h5 {
+  color: #333;
+  letter-spacing: 2px;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.about-text p{
+  color: #555;
+  letter-spacing: 1px;
+  font-weight: 700;
+  line-height: 28px;
+  font-size: 18px;
+  /* margin-top: 35px; */
+  text-align: justify;
+}
+
+/* End About */
 
 @media (max-width: 768px) {
   #hamburger {
@@ -194,9 +235,26 @@ header .image img {
   header {
     grid-template-columns: repeat(1, 1fr);
   }
+  header .content p {
+    text-align: justify;
+  }
   header .image {
     grid-area: 1/1/2/2;
   }
+
+  .about-me {
+    flex-direction: column;
+  }
+  .about-me img{
+    width: 600px;
+  }
+  .about-text h2{
+    margin-top: 20px;
+  }
+  .about-text h5{
+    margin-bottom: 12px;
+  }
+  
 }
 
 /* HP */
@@ -204,11 +262,26 @@ header .image img {
   html {
     font-size: 55%;
   }
-  header .image::before {
-    display: none;
+  header .content p {
+    text-align: justify;
+    font-size: 15px;
+  }
+  header .image img {
+    max-width: 320px;
+    width: 320px;
   }
 
-  header .image img {
-    width: 320px;
+  .about-me img{
+    width: 350px;
+  }
+  .about-text h2{
+    font-size: 50px;
+  }
+  .about-text p{
+    font-size: 16px;
+  }
+  .about-text{
+    margin: 0;
+
   }
 }
