@@ -93,7 +93,7 @@ header {
   max-width: 1200px;
   background-color: white;
   margin: 20px auto;
-  padding: 40px;
+  padding: 20px;
   border-radius: 5px;
   padding-top: 2rem;
   /* position: absolute; */
@@ -241,12 +241,15 @@ header .image img {
   header .image {
     grid-area: 1/1/2/2;
   }
+  header .image img{
+    width: 100%;
+  }
 
   .about-me {
     flex-direction: column;
   }
   .about-me img{
-    width: 600px;
+    width: 100%;
   }
   .about-text h2{
     margin-top: 20px;
@@ -262,17 +265,20 @@ header .image img {
   html {
     font-size: 55%;
   }
+  header .content{
+    width: 100%;
+  }
   header .content p {
     text-align: justify;
     font-size: 15px;
   }
   header .image img {
-    max-width: 320px;
-    width: 320px;
+    width: 100%;
+    
   }
 
   .about-me img{
-    width: 350px;
+    width: 100%;
   }
   .about-text h2{
     font-size: 50px;
@@ -282,6 +288,6 @@ header .image img {
   }
   .about-text{
     margin: 0;
-
+    width: 100%;
   }
 }
