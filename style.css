@@ -84,16 +84,14 @@ body {
 #hamburger {
   display: none;
 }
-
 /* End Navbar */
 
 /* Header */
-
 header {
   max-width: 1200px;
   background-color: white;
   margin: 20px auto;
-  padding: 20px;
+  padding: 40px;
   border-radius: 5px;
   padding-top: 2rem;
   /* position: absolute; */
@@ -111,7 +109,7 @@ header .content h1 {
   line-height: 4rem;
 }
 
-header .content h1 span {
+header .content h1 span, .project .judul h1 span {
   color: blue;
   font-family: "Bricolage Grotesque", sans-serif;
 }
@@ -146,11 +144,9 @@ header .image img {
   background-color: #1e40af;
   text-decoration: underline;
 }
-
 /* End Header */
 
 /* About */
-
 .about {
   margin: auto;
   max-width: 1200px;
@@ -199,8 +195,101 @@ header .image img {
   /* margin-top: 35px; */
   text-align: justify;
 }
-
 /* End About */
+
+/* Skill */
+
+.mySkill{
+  max-width: 1200px;
+  background-color: white;
+  margin: 20px auto;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.mySkill h1{
+  text-align: center;
+  font-size: 30px;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.mySkill .bhs, .frame-alat{
+  color: rgb(106, 106, 106);
+  margin-top: 20px;
+}
+
+.mySkill .skill-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.mySkill .skill-container .item, .child{
+  background-color: #efefea;
+  padding: 13px 40px;
+  border-radius: 10px;
+}
+
+.mySkill .fram-tools{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.mySkill .fram-tools .child i{
+  font-size: 20px;
+}
+
+/* end skill */
+
+/* Projek */
+
+.project{
+  max-width: 1200px;
+  background-color: white;
+  margin: 20px auto;
+  /* padding: 40px; */
+  border-radius: 5px;
+}
+
+
+.project .judul h1{
+  padding-top: 20px;
+  text-align: center;
+}
+
+.project .judul p{
+  margin: 10px auto;
+  width: 800px;
+  text-align: center;
+}
+
+.project .projek-content{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.project .projek-content .projek{
+  background-color: #efefea;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* end projek */
+
+@media (max-width: 950px) {
+  .mySkill .fram-tools{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 @media (max-width: 768px) {
   #hamburger {
@@ -257,6 +346,13 @@ header .image img {
   .about-text h5{
     margin-bottom: 12px;
   }
+
+  .mySkill .skill-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mySkill .fram-tools{
+    grid-template-columns: repeat(2, 1fr);
+  }
   
 }
 
@@ -289,5 +385,9 @@ header .image img {
   .about-text{
     margin: 0;
     width: 100%;
+  }
+
+  .mySkill .bhs, .frame-alat{
+    font-size: 10px;
   }
 }
