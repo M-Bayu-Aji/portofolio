@@ -12,6 +12,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="style.css" />
     <title>Portofolio</title>
   </head>
@@ -41,7 +43,7 @@
         <!-- <h4>CREATE YOUR SITE LIKE A PRO</h4> -->
         <h1>Hi, I'm <span>BayuAji</span>, Web Developer</h1>
         <p>
-          I am a FrontEnd Developer. I can provide clean code and perfect ui/ux
+          I am a Web Developer. I can provide clean code and perfect ui/ux
           design. I also make websites more interactive with web animations.
         </p>
         <button class="btn">
@@ -55,12 +57,12 @@
     <!-- End Header -->
 
     <!-- About -->
-    <section class="about" id="about">
+    <section class="about" id="about" data-aos="fade-right" data-aos-duration="1000">
       <div class="about-me" data-aos="fade-up" data-aos-duration="1000">
         <img src="img/fotoBys.jpg" />
         <div class="about-text">
           <h2>About <span>Me</span></h2>
-          <h5>FrontEnd Developer</h5>
+          <h5>Web Developer</h5>
           <p>
             Saya seorang pelajar di SMK Wikrama Bogor dari, Rombel PPLG X-2,
             Rayon Cicurug 8, Dari alumni SMPN 01 Cigombong, Saya lahir di Kota
@@ -74,7 +76,7 @@
     <!-- End About -->
 
     <!-- skill -->
-    <section class="mySkill">
+    <section class="mySkill" data-aos="fade-right" data-aos-duration="1000">
       <h1>My Skills</h1>
       <div class="bhs">Languages Programming</div>
       <div class="skill-container">
@@ -96,8 +98,8 @@
         </div>
       </div>
 
-      <div class="frame-alat">Frameworks & Tools</div>
-      <div class="fram-tools">
+      <div class="frame-alat">Frameworks</div>
+      <div class="fram">
         <div class="child">
           <i class="fa-brands fa-bootstrap"></i>
           <p>Boostrap</p>
@@ -106,6 +108,18 @@
           <i class="fa-brands fa-css3"></i>
           <p>Tailwind</p>
         </div>
+        <div class="child">
+          <i class="fa-brands fa-laravel"></i>
+          <p>Laravel</p>
+        </div>
+        <div class="child">
+          <i class="fa-brands fa-node"></i>
+          <p>Node JS</p>
+        </div>
+      </div>
+
+      <div class="frame-alat">Tools</div>
+      <div class="tools">
         <div class="child">
           <i class="fa-brands fa-git-alt"></i>
           <p>Git</p>
@@ -127,7 +141,7 @@
     <!-- end skill -->
 
     <!-- Project -->
-    <section class="project" id="project">
+    <section class="project" id="project" data-aos="fade-right" data-aos-duration="1000">
       <div class="judul">
         <h1>Check Out My <span>Projects</span></h1>
         <p>
@@ -138,61 +152,148 @@
       </div>
       <div class="projek-content">
         <div class="projek">
-          <img src="img/imt.png" width="350px">
+          <img src="img/imt.png" class="img-projek" />
           <div class="logo">
-            <img src="img/html.png" alt=""  width="20px">
-            <img src="img/css.svg" alt="" width="20px">
-            <img src="img/php.svg" alt="" width="30px">
+            <img src="img/html.png" alt="" width="20px" />
+            <img src="img/css.svg" alt="" width="20px" />
+            <img src="img/php.svg" alt="" width="30px" />
           </div>
-          <h3>IMT (Index Masa Tubuh)</h3>
+          <div class="project-desk">
+            <a href="http://www.bayuajiys.byethost32.com/IMT/" target="_blank">
+            IMT (Index Masa Tubuh)
+            </a>
+            <p>Creating a IMT(Index Masa Tubuh) system</p>
+          </div>
         </div>
         <div class="projek">
-          <img src="img/bahanbakar.png" width="350px" height="175px">
+          <img src="img/bahanbakar.png" class="img-projek" height="175px" />
           <div class="logo">
-            <img src="img/html.png" alt=""  width="20px">
-            <img src="img/bootstrap-4-logo.svg" alt="" width="20px">
-            <img src="img/php.svg" alt="" width="30px">
+            <img src="img/html.png" alt="" width="20px" />
+            <img src="img/bootstrap-4-logo.svg" alt="" width="20px" />
+            <img src="img/php.svg" alt="" width="30px" />
           </div>
-          <h3>Shell Bahan Bakar</h3>
+          <div class="project-desk">
+            <a href="http://www.bayuajiys.byethost32.com/Bahan_Bakar/" target="_blank">
+            Shell Bahan Bakar
+            </a>
+            <p>Creating a Shell Bahan Bakar System</p>
+          </div>
         </div>
         <div class="projek">
-          <img src="img/rentalmotor.png" width="350px">
+          <img src="img/rentalmotor.png" class="img-projek" />
           <div class="logo">
-            <img src="img/html.png" alt=""  width="20px">
-            <img src="img/bootstrap-4-logo.svg" alt="" width="20px">
-            <img src="img/php.svg" alt="" width="30px">
+            <img src="img/html.png" alt="" width="20px" />
+            <img src="img/bootstrap-4-logo.svg" alt="" width="20px" />
+            <img src="img/php.svg" alt="" width="30px" />
           </div>
-          <h3>Rental Motor</h3>
+          <div class="project-desk">
+            <a href="http://www.bayuajiys.byethost32.com/Rental_Motor/" target="_blank">
+            Rental Motor
+            </a>
+            <p>Creating a Rental Motor System</p>
+          </div>
         </div>
         <div class="projek">
-          <img src="img/datasiswa.png" width="350px" height="175px">
+          <img src="img/datasiswa.png" class="img-projek" height="175px" />
           <div class="logo">
-            <img src="img/html.png" alt=""  width="20px">
-            <img src="img/bootstrap-4-logo.svg" alt="" width="20px">
-            <img src="img/php.svg" alt="" width="30px">
+            <img src="img/html.png" alt="" width="20px" />
+            <img src="img/bootstrap-4-logo.svg" alt="" width="20px" />
+            <img src="img/php.svg" alt="" width="30px" />
           </div>
-          <h3>Data Siswa</h3>
+          <div class="project-desk">
+            <a href="http://www.bayuajiys.byethost32.com/Data_Siswa/" target="_blank">
+            Student Data Management
+            </a>
+            <p>Creating a Student Data Management System</p>
+          </div>
         </div>
         <div class="projek">
-          <img src="img/webshop.png" width="350px" height="175px">
+          <img src="img/kasir.png" class="img-projek" height="175px" />
           <div class="logo">
-            <img src="img/html.png" alt=""  width="20px">
-            <img src="img/css.svg" alt="" width="20px">
+            <img src="img/html.png" alt="" width="20px" />
+            <img src="img/bootstrap-4-logo.svg" alt="" width="20px" />
+            <img src="img/php.svg" alt="" width="30px" />
           </div>
-          <h3>Web Shop</h3>
+          <div class="project-desk">
+            <a href="http://www.bayuajiys.byethost32.com/Kasir/" target="_blank">
+              Cashier Payment System
+            </a>
+            <p>Creating a Cashier Payment System</p>
+          </div>
         </div>
         <div class="projek">
-          <img src="img/kasir.png" width="350px" height="175px">
+          <img src="img/webshop.png" class="img-projek" height="175px" />
           <div class="logo">
-            <img src="img/html.png" alt=""  width="20px">
-            <img src="img/bootstrap-4-logo.svg" alt="" width="20px">
-            <img src="img/php.svg" alt="" width="30px">
+            <img src="img/html.png" alt="" width="20px" />
+            <img src="img/css.svg" alt="" width="20px" />
           </div>
-          <h3>Kasir</h3>
+          <div class="project-desk">
+            <a href="https://m-bayu-aji.github.io/WebShop/" target="_blank">
+            Web Shop
+            </a>
+            <p>Creating a Web Shop design</p>
+          </div>
         </div>
       </div>
     </section>
     <!-- end project -->
+
+    <!-- Contact Form -->
+    <section class="contact" id="contact" data-aos="fade-right" data-aos-duration="1000">
+      <div class="content-text">
+        <h1>Let's 👋 <span>Work</span> Together</h1>
+        <p>
+          I'm here to help if you're searching for a web developer to bring your
+          idea to life or a development partner to help take your business to
+          the next level.
+        </p>
+      </div>
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d247.64227394683823!2d106.81809079771497!3d-6.736098958105907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1701090930026!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+        <form action="" class="contact-content">
+          <label for="name">Name </label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter Your Name"
+            class="contact-inputs"
+            required
+          />
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter Your Email"
+            class="contact-inputs"
+            required
+          />
+          <label for="pesan">Message</label>
+          <textarea
+            name="message"
+            id="pesan"
+            placeholder="Message"
+            class="contact-input"
+            required
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+    <!-- end Contact -->
+
+    <footer>
+      <p>&#169MuhammadBayuAji</p>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="script.js"></script>
     <script>
       feather.replace();

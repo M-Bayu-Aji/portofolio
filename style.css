@@ -21,7 +21,6 @@ body {
   font-family: "Poppins";
   background-color: #efefea;
   padding: 1.2rem;
-  height: 4000px;
 }
 
 /* Navbar */
@@ -109,7 +108,7 @@ header .content h1 {
   line-height: 4rem;
 }
 
-header .content h1 span, .project .judul h1 span {
+header .content h1 span, .project .judul h1 span, .contact .content-text h1 span{
   color: blue;
   font-family: "Bricolage Grotesque", sans-serif;
 }
@@ -148,7 +147,7 @@ header .image img {
 
 /* About */
 .about {
-  margin: auto;
+  margin: 0 auto;
   max-width: 1200px;
   padding: 40px;
   background-color: white;
@@ -209,7 +208,7 @@ header .image img {
 
 .mySkill h1{
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   font-family: "Bricolage Grotesque", sans-serif;
 }
 
@@ -233,16 +232,16 @@ header .image img {
   border-radius: 10px;
 }
 
-.mySkill .fram-tools{
+.mySkill .fram, .tools{
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   margin: 10px 0;
   text-align: center;
 }
 
-.mySkill .fram-tools .child i{
+.mySkill .fram .child i{
   font-size: 20px;
 }
 
@@ -261,12 +260,13 @@ header .image img {
 
 .project .judul h1{
   padding-top: 20px;
+  font-size: 35 px;
   text-align: center;
 }
 
 .project .judul p{
-  margin: 10px auto;
-  width: 800px;
+  margin: 10px 60px;
+  /* width: 800px; */
   text-align: center;
 }
 
@@ -283,10 +283,111 @@ header .image img {
   border-radius: 5px;
 }
 
+.project .projek-content .projek .img-projek{
+  width: 350px;
+}
+
+.project .projek-content .project-desk a{
+  color: black;
+}
+.project .projek-content .project-desk a:hover{
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.project .projek-content .project-desk p{
+  color: #6a6a6a;
+  font-size: 12px;
+}
+
 /* end projek */
 
+/* contact */
+
+.contact{
+  max-width: 1200px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.contact .content-text{
+  text-align: center;
+}
+
+.contact .content-text p{
+  margin: 20px 60px;
+}
+
+.contact .contact-content{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+  width: 450px;
+  border-radius: 5px;
+}
+
+.contact .row{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  padding: 20px;
+  gap: 20px;
+  background-color: #efefea;
+  border-radius: 5px;
+}
+
+.contact .row .map{
+  width: 600px;
+  height: 400px;
+  /* margin: 0 0 20px 20px; */
+}
+
+.contact .contact-content .contact-inputs{
+  width: 400px;
+  height: 50px;
+  border: 1px solid black;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 10px;
+  font-family: "Poppins";
+}
+
+ .contact-content textarea{
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-family: "Poppins";
+  padding: 20px;
+  padding-top: 20px;
+  border-radius: 20px;
+}
+
+.contact .contact-content button{
+  padding: 1rem 1.5rem;  
+  color: #fff;
+  background-color: #1d4ed8;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  width: 400px;
+}
+/* end contact */
+
+footer{
+   max-width: 1200px;
+   margin: 0 auto;
+   text-align: center;
+   color: #1a1f2c;
+}
+
 @media (max-width: 950px) {
-  .mySkill .fram-tools{
+  .mySkill .fram, .tools{
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -350,10 +451,37 @@ header .image img {
   .mySkill .skill-container{
     grid-template-columns: repeat(2, 1fr);
   }
-  .mySkill .fram-tools{
+  .mySkill h1{
+    font-size: 30px;
+  }
+  .mySkill .fram, .tools{
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
+  .project .projek-content{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .project .judul h1{
+    font-size: 20px;
+  }
+  .project .judul p{
+    margin: 10px 40px;
+    font-size: 10px;
+  }
+  .project .projek-content .projek .img-projek{
+    width: 100%;
+  }
+
+  .contact .row{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contact .row .map{
+    margin: 0 auto;
+    width: 100%;
+  }
+  .contact .contact-content{
+    margin: 0 auto;
+  }
 }
 
 /* HP */
@@ -389,5 +517,9 @@ header .image img {
 
   .mySkill .bhs, .frame-alat{
     font-size: 10px;
+  }
+
+  .project .projek-content{
+    grid-template-columns: repeat(1, 1fr);
   }
 }
