@@ -26,7 +26,7 @@
         <a href="#home"><i class="ri-home-smile-line"></i> Home</a>
         <a href="#about"><i class="fa-regular fa-circle-user"></i> About</a>
         <a href="#menu"><i class="ri-tools-line"></i> Project</a>
-        <a href="#kontak"><i class="fa-regular fa-address-card"></i> Contact</a>
+        <a href="#contact"><i class="fa-regular fa-address-card"></i> Contact</a>
       </div>
 
       <div class="navbar-extra">
@@ -46,9 +46,9 @@
           I am a Web Developer. I can provide clean code and perfect ui/ux
           design. I also make websites more interactive with web animations.
         </p>
-        <button class="btn">
-          <i class="fa-solid fa-phone"></i> Book a call
-        </button>
+        <a href="CV.pdf" download="CV.pdf" class="btn">
+          <i class="fa-solid fa-download"></i>
+           Download CV</a>
       </div>
       <div class="image">
         <img src="img/header.png" />
@@ -57,7 +57,7 @@
     <!-- End Header -->
 
     <!-- About -->
-    <section class="about" id="about" data-aos="fade-right" data-aos-duration="1000">
+    <section class="about" id="about" data-aos="fade-up" data-aos-duration="1000">
       <div class="about-me" data-aos="fade-up" data-aos-duration="1000">
         <img src="img/fotoBys.jpg" />
         <div class="about-text">
@@ -70,13 +70,16 @@
             Pertama dari dua bersaudara, Hobby saya berolahraga dan bermain
             gadget.
           </p>
+          <button class="btn-ser">
+          <i class="fa-solid fa-award"></i> View Certificate
+          </button>
         </div>
       </div>
     </section>
     <!-- End About -->
 
     <!-- skill -->
-    <section class="mySkill" data-aos="fade-right" data-aos-duration="1000">
+    <section class="mySkill" data-aos="fade-up" data-aos-duration="1000">
       <h1>My Skills</h1>
       <div class="bhs">Languages Programming</div>
       <div class="skill-container">
@@ -141,7 +144,7 @@
     <!-- end skill -->
 
     <!-- Project -->
-    <section class="project" id="project" data-aos="fade-right" data-aos-duration="1000">
+    <section class="project" id="project" data-aos="fade-up" data-aos-duration="1000">
       <div class="judul">
         <h1>Check Out My <span>Projects</span></h1>
         <p>
@@ -158,6 +161,10 @@
             <img src="img/css.svg" alt="" width="20px" />
             <img src="img/php.svg" alt="" width="30px" />
           </div>
+          <div class="popup-img">
+            <span>&times;</span>
+            <img src="img/imt.png" alt="">
+          </div>
           <div class="project-desk">
             <a href="http://www.bayuajiys.byethost32.com/IMT/" target="_blank">
             IMT (Index Masa Tubuh)
@@ -171,6 +178,10 @@
             <img src="img/html.png" alt="" width="20px" />
             <img src="img/bootstrap-4-logo.svg" alt="" width="20px" />
             <img src="img/php.svg" alt="" width="30px" />
+          </div>
+          <div class="popup-img">
+            <span>&times;</span>
+            <img src="img/bahanbakar.png" alt="">
           </div>
           <div class="project-desk">
             <a href="http://www.bayuajiys.byethost32.com/Bahan_Bakar/" target="_blank">
@@ -186,6 +197,10 @@
             <img src="img/bootstrap-4-logo.svg" alt="" width="20px" />
             <img src="img/php.svg" alt="" width="30px" />
           </div>
+          <div class="popup-img">
+            <span>&times;</span>
+            <img src="img/rentalmotor.png" alt="">
+          </div>
           <div class="project-desk">
             <a href="http://www.bayuajiys.byethost32.com/Rental_Motor/" target="_blank">
             Rental Motor
@@ -199,6 +214,10 @@
             <img src="img/html.png" alt="" width="20px" />
             <img src="img/bootstrap-4-logo.svg" alt="" width="20px" />
             <img src="img/php.svg" alt="" width="30px" />
+          </div>
+          <div class="popup-img">
+            <span>&times;</span>
+            <img src="img/datasiswa.png" alt="">
           </div>
           <div class="project-desk">
             <a href="http://www.bayuajiys.byethost32.com/Data_Siswa/" target="_blank">
@@ -214,6 +233,10 @@
             <img src="img/bootstrap-4-logo.svg" alt="" width="20px" />
             <img src="img/php.svg" alt="" width="30px" />
           </div>
+          <div class="popup-img">
+            <span>&times;</span>
+            <img src="img/kasir.png" alt="">
+          </div>
           <div class="project-desk">
             <a href="http://www.bayuajiys.byethost32.com/Kasir/" target="_blank">
               Cashier Payment System
@@ -227,6 +250,10 @@
             <img src="img/html.png" alt="" width="20px" />
             <img src="img/css.svg" alt="" width="20px" />
           </div>
+          <div class="popup-img">
+            <span>&times;</span>
+            <img src="img/webshop.png" alt="">
+          </div>
           <div class="project-desk">
             <a href="https://m-bayu-aji.github.io/WebShop/" target="_blank">
             Web Shop
@@ -234,12 +261,13 @@
             <p>Creating a Web Shop design</p>
           </div>
         </div>
+        <a href="projek" class="v">Views All</a>
       </div>
     </section>
     <!-- end project -->
 
     <!-- Contact Form -->
-    <section class="contact" id="contact" data-aos="fade-right" data-aos-duration="1000">
+    <section class="contact" id="contact" data-aos="fade-up" data-aos-duration="1000">
       <div class="content-text">
         <h1>Let's 👋 <span>Work</span> Together</h1>
         <p>
@@ -258,19 +286,13 @@
         ></iframe>
         <form action="" class="contact-content">
           <label for="name">Name </label>
-          <input
-            type="text"
-            id="name"
-            placeholder="Enter Your Name"
-            class="contact-inputs"
-            required
-          />
+          <input type="text" placeholder="Your Name" id="name" name="text" class="input" required>  
           <label for="email">Email</label>
           <input
             type="email"
             id="email"
             placeholder="Enter Your Email"
-            class="contact-inputs"
+            class="input"
             required
           />
           <label for="pesan">Message</label>
@@ -278,10 +300,10 @@
             name="message"
             id="pesan"
             placeholder="Message"
-            class="contact-input"
+            class="input"
             required
           ></textarea>
-          <button type="submit">Send</button>
+          <button type="submit" class="send">Send Message <i class="fa-solid fa-arrow-trend-up"></i></button>
         </form>
       </div>
     </section>
