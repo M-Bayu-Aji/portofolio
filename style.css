@@ -21,8 +21,6 @@ body {
   font-family: "Poppins";
   background-color: #efefea;
   padding: 1.2rem;
-  background: url(img/bg.png);
-  animation: moveBackground 10s linear infinite;
 }
 
 body.no-scroll {
@@ -41,7 +39,6 @@ body.no-scroll {
   background-color: white;
   position: sticky;
   top: 0;
-  z-index: 999;
   border-radius: 5px;
   box-shadow: 1px 1px 10px #aaa;
 }
@@ -218,6 +215,75 @@ header .image img {
 }
 /* End About */
 
+/* Sertifikat */
+
+.certificates .container {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.certificates .container h1 {
+  color: #333;
+  font-size: 35px;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.certificate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin: 20px 0;
+}
+
+.img {
+  background-color: white;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  color: #555;
+}
+
+.judulWeb {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.cert-date,
+.cert-provider {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.view-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: background-color 0.3s;
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+}
+
+/* End Sertifikat */
+
 /* Skill */
 
 .mySkill {
@@ -226,6 +292,12 @@ header .image img {
   margin: 20px auto;
   padding: 40px;
   border-radius: 5px;
+}
+
+.mySkill .container{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 10px;
 }
 
 .mySkill h1 {
@@ -365,7 +437,7 @@ header .image img {
   object-fit: cover;
 }
 
-.project .v{
+.project .v {
   color: white;
   background-color: #1d4ed8;
   text-align: center;
@@ -375,7 +447,7 @@ header .image img {
   padding: 10px;
 }
 
-.project .v:hover{
+.project .v:hover {
   background-color: #1e40af;
   text-decoration: underline;
 }
@@ -601,6 +673,10 @@ footer {
   html {
     font-size: 55%;
   }
+  body {
+    padding: 0;
+  }
+
   header .content {
     width: 100%;
   }
@@ -633,14 +709,5 @@ footer {
 
   .project .projek-content {
     grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@keyframes moveBackground {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 10% 10%;
   }
 }

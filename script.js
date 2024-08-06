@@ -1,17 +1,20 @@
-// Toggle class active
+const hamburger = document.querySelector("#hamburger");
 const navbarNav = document.querySelector(".navbar-nav");
-// ketika hambuerger menu di klik
-document.querySelector("#hamburger").onclick = () => {
-  navbarNav.classList.toggle("active");
-};
 
-// Klik Di luar Side Bar untuk menghilangkan nav
-const hambuerger = document.querySelector("#hamburger");
-document.addEventListener("click", function (e) {
-  if (!hambuerger.contains(e.target) && !navbarNav.contains(e.target)) {
-    navbarNav.classList.remove("active");
-  }
+hamburger.addEventListener("click", function (e) {
+    // Mencegah aksi default dari klik
+    e.preventDefault();
+    
+    // Tambah atau hapus kelas 'active'
+    navbarNav.classList.toggle("active");
 });
+
+document.addEventListener("click", function (e) {
+    if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+        navbarNav.classList.remove("active");
+    }
+});
+
 
 // Popup Img
 document.querySelectorAll('.projek img').forEach(Image => {
