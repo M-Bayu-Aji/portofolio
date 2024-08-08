@@ -41,6 +41,8 @@ body.no-scroll {
   top: 0;
   border-radius: 5px;
   box-shadow: 1px 1px 10px #aaa;
+  z-index: 999;
+
 }
 
 .navbar .navbar-logo {
