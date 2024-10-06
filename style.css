@@ -42,7 +42,6 @@ body.no-scroll {
   border-radius: 5px;
   box-shadow: 1px 1px 10px #aaa;
   z-index: 999;
-
 }
 
 .navbar .navbar-logo {
@@ -147,7 +146,8 @@ header .image img {
 }
 
 .btn:hover,
-.about .btn-ser:hover {
+.about .btn-ser:hover,
+.certificates .view-btn a:hover, .certificates-content .view-btn a:hover {
   background-color: #1e40af;
   text-decoration: underline;
 }
@@ -219,69 +219,71 @@ header .image img {
 
 /* Sertifikat */
 
-.certificates .container {
-  margin-top: 20px;
-  width: 100%;
-  max-width: 1200px;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.certificates .container h1 {
-  color: #333;
-  font-size: 35px;
-  font-family: "Bricolage Grotesque", sans-serif;
-}
-
-.certificate {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #f0f0f0;
-  padding: 10px 20px;
-  border-radius: 6px;
+.certificates-content {
   margin: 20px 0;
-}
-
-.img {
-  background-color: white;
-  padding: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   border-radius: 5px;
 }
 
-.cert-info {
+.certificates {
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  gap: 1rem;
+  margin: 20px 0;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.certificates img {
+  width: 50px;
+  align-self: center;
+  border-radius: 5px;
+}
+.certificates .details {
   display: flex;
   flex-direction: column;
-  font-size: 15px;
-  color: #555;
+  justify-content: center;
+}
+.certificates .details h4,
+.certificates .details p {
+  margin: 0;
+}
+.certificates .view-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.certificates .view-btn a {
+  padding: 10px 20px;
+  background-color: #1d4ed8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Poppins";
 }
 
-.judulWeb {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.cert-date,
-.cert-provider {
-  font-size: 0.9em;
-  color: #666;
+.judulWeb h3 {
+  margin: 10px 0;
 }
 
 .view-button {
-  background-color: #007bff;
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 0.9em;
-  transition: background-color 0.3s;
+  align-self: flex-start;
+  margin-top: 10px;
 }
 
-.view-button:hover {
-  background-color: #0056b3;
+.certificates-content .view-btn a {
+  color: white;
+  background-color: #1d4ed8;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 100px;
+  padding: 10px 15px;
+  margin: 20px 0;
 }
 
 /* End Sertifikat */
@@ -296,7 +298,7 @@ header .image img {
   border-radius: 5px;
 }
 
-.mySkill .container{
+.mySkill .container {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-top: 10px;
@@ -668,6 +670,18 @@ footer {
   .contact .contact-content {
     margin: 0 auto;
   }
+
+  .certificates {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .certificates img {
+    margin: 0 auto;
+    width: 75px;
+  }
+  .certificates .view-btn {
+    margin-top: 15px;
+  }
 }
 
 /* HP */
@@ -711,5 +725,9 @@ footer {
 
   .project .projek-content {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .certificates .details{
+    font-size: 10px;
   }
 }
