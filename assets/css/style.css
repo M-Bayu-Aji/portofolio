@@ -284,6 +284,12 @@ header .image img {
   width: 100px;
   padding: 10px 15px;
   margin: 20px 0;
+  text-decoration: none;
+}
+
+certificates-content .view-btn a:hover {
+  background-color: #1e40af;
+  text-decoration: underline;
 }
 
 /* End Sertifikat */
